@@ -1,1 +1,4 @@
-# GameDesign
+- 소속 : 강릉원주대학교 멀티미디어공학과
+- 팀이름 : 8조
+- 조원 : 김륜구 최상은 최지윤 최서영
+- 개발환경 : Visual Studio Code Version 1.95.0
