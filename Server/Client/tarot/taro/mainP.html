@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>매직타로와 미니게임</title>
+    <link rel="stylesheet" href="mainP.css">
+</head>
+
+<body>
+    <p id="welcome-message"></p>
+    <div class="container">
+        <!-- 미니게임 버튼 -->
+        <div class="left">
+            <h2>같은 그림 맞추기</h2>
+            <div class="button-container">
+                <a href="44.html">
+                    <button class="button" onclick="logEvent()">게임 시작</button>
+                </a>
+            </div>
+            <div class="bottom-text bottom-left">클리어 시 🪙적립</div>
+        </div>
+
+        <!-- 타로 게임 버튼 -->
+        <div class="right">
+            <div id="coinDisplay">🪙 0</div>
+            <div class="description" id="description"></div>
+            <h2>타로</h2>
+            <div class="button-container">
+                <a href="Love.html" onclick="spendCoin()">
+                    <button class="button" onmouseover="showDescription('love')"
+                        onmouseout="hideDescription()">연애운</button>
+                </a>
+                <a href="Money.html" onclick="spendCoin()">
+                    <button class="button" onmouseover="showDescription('wealth')"
+                        onmouseout="hideDescription()">재물운</button>
+                </a>
+                <a href="Health.html" onclick="spendCoin()">
+                    <button class="button" onmouseover="showDescription('health')"
+                        onmouseout="hideDescription()">건강운</button>
+                </a>
+                <a href="Fate.html" onclick="spendCoin()">
+                    <button class="button" onmouseover="showDescription('fate')" onmouseout="hideDescription()">운명의
+                        흐름</button>
+                </a>
+            </div>
+            <div class="bottom-text bottom-right">🪙 사용해서 타로 보기</div>
+        </div>
+    </div>
+
+    <script src="mainP.js"></script>
+</body>
+
+</html>

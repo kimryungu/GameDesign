@@ -1,0 +1,130 @@
+body {
+    position: relative;
+    background-color: #170B3B;
+    color: gold;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.text-color {
+    color: white;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin: 10px;
+    width: 130px;
+    height: 225px;
+}
+
+.game-container{
+    position: absolute;
+    left: 160px;
+}
+.card {
+    background-color: #2C2F4A;
+    border: 2px solid gold;
+    border-radius: 5px;
+    padding: 20px;
+    cursor: pointer;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-image{
+    width: 100px; /* 카드 이미지 크기 조정 */
+    height: 150px;
+}
+.card.flipped {
+    background-color: #4A4E6D;
+}
+
+.hidden {
+    display: none;
+}
+
+.matched-cards {
+    position: absolute;
+    right: 10%;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.matched-card {
+    display: flex; /* 카드와 설명을 가로로 나란히 배치 */
+    align-items: center; /* 세로 중앙 정렬 */
+    margin-bottom: 10px; /* 카드 간 간격 */
+    width: 320px;
+}
+
+.matched-card img {
+    width: 100px; /* 카드 이미지 크기 조정 */
+    height: 150px;
+    margin-right: 10px;
+}
+
+.return-button {
+    position: absolute;  /* 화면에 고정 */
+    top: -10px;        /* 화면 상단에서 20px 아래 */
+    right: 30px;      /* 화면 우측에서 20px 왼쪽 */
+    background-color: rgba(0, 00, 0, 0.2); /* 반투명한 흰색 배경 */
+    color: #FAD081; 
+    border-radius: 10px; /* 둥근 모서리 */
+    padding: 12px 23px; /* 버튼 크기 */
+    font-size: 1em; 
+    font-weight: bold; /* 글씨를 두껍게 설정 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.return-button:hover {
+    background-color: rgba(0, 0, 0, 0.4); /* 호버 시 배경색 변경 */
+}
+
+.button {
+    background-color: rgba(0, 00, 0, 0.2); /* 반투명한 흰색 배경 */
+    color: #FAD081; 
+    border-radius: 10px; /* 둥근 모서리 */
+    padding: 12px 23px; /* 버튼 크기 */
+    font-size: 1em; 
+    font-weight: bold; /* 글씨를 두껍게 설정 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: rgba(0, 0, 0, 0.4); /* 호버 시 배경색 변경 */
+}
+
+.button-container {
+    position: absolute; /* 절대 위치 설정 */
+    top: -10px; /* 위에서 20px 떨어진 위치 */
+    left: 30px; /* 왼쪽에서 20px 떨어진 위치 */
+}
+
+/* 빛나는 효과 애니메이션 추가 */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px rgb(255, 242, 169);
+    }
+    50% {
+        box-shadow: 0 0 20px gold, 0 0 30px gold;
+    }
+    100% {
+        box-shadow: 0 0 10px rgb(255, 242, 169);
+    }
+}
+
+.card.matched {
+    animation: glow 2s ease-in-out; /* 2초 동안 빛남 */
+    border-color: gold;
+}

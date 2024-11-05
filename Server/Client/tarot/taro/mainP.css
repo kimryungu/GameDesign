@@ -1,0 +1,139 @@
+body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #170B3B; 
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* 화면 레이아웃 */
+        .container {
+            display: flex;
+            justify-content: space-between;
+            width: 80%;
+            height: 90vh;
+        }
+
+        .left, .right {
+            width: 45%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 20px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        .left h2, .right h2 {
+            color: #F6DA86;
+            font-size: 3em;
+            margin-bottom: 30px;
+        }
+
+        /* 코인 표시 스타일 */
+        #coinDisplay {
+            color: #FFA500; 
+            font-size: 1.5em; 
+            margin-bottom: 20px; 
+            position: absolute; /* 절대 위치 지정 */
+            top: 20px; /* 위쪽 위치 */
+            left: 20px; /* 왼쪽 위치 */
+            padding: 10px; /* 여백 */
+            border: 2px solid #FAD081; 
+            border-radius: 10px; 
+            background-color: rgba(0, 0, 0, 0.5); 
+        }
+
+        /* 설명 텍스트 */
+        .description {
+            color: #A7D3E0;
+            font-size: 1.2em;
+            text-align: center;
+            margin-bottom: 20px;
+            height: 60px; 
+            display: flex;
+            align-items: center; 
+            justify-content: center; 
+            visibility: hidden; /* 처음에 숨김, 높이는 유지 */
+        }
+
+        a {
+            text-decoration: none; /* 링크의 밑줄 제거 */
+            color: inherit; /* 부모 요소의 색상 상속 */
+        }
+
+        .button {
+            background-color: #FAD081;
+            color: #170B3B;
+            border: 3px solid #170B3B;
+            border-radius: 10px;
+            padding: 15px 30px; /* 버튼 크기 */
+            text-align: center;
+            font-size: 1.2em; 
+            font-weight: bold; /* 글씨를 두껍게 설정 */
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4), 0 0 15px rgba(250, 208, 129, 0.5);
+            max-width: 170px; /* 버튼 최대 너비 조정 */
+            width: 100%; /* 버튼 너비 통일 */
+        }
+
+        .button:hover {
+            background: linear-gradient(135deg, #F1B25F, #FAD081); /* 호버 효과 */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5), 0 0 20px rgba(250, 208, 129, 0.8);
+        }
+
+        /* 버튼을 2x2 그리드로 정렬 */
+        .button-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; 
+            gap: 10px; /* 버튼 사이 간격 */
+            width: 100%;
+        }
+
+        .button-container a {
+            flex-basis: calc(45% - 10px); 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        /* 배경에 별 만들기 */
+        .star {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(250, 208, 129, 0.7);
+            opacity: 0;
+            animation: twinkle 2s infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+
+        /* 하단 텍스트 스타일 */
+        .bottom-text {
+            color: #FFFACD;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-top: 20px; /* 위쪽 여백 */
+        }
+
+        .bottom-left {
+            margin-top: 40px; 
+        }
+
+        .bottom-right {
+            margin-top: 40px; 
+        }
