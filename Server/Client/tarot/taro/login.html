@@ -135,7 +135,7 @@
             const eventTime = new Date().toLocaleTimeString(); // 현재 시간
             const id = members[username] === password ? [username] : [0]; // 로그인 성공 시 학번, 실패 시 0
             const eventType = "로그인 버튼 클릭"; // 이벤트 종류
-            const comment = members[username] === password ? "로그인 성공" : "로그인 실패"; // 로그인 성공/실패에 따라 코멘트 변경
+            const comment = members[username] === password ? "로그인에 성공하였습니다." : "로그인에 실패하였습니다."; // 로그인 성공/실패에 따라 코멘트 변경
 
             const url = "https://script.google.com/macros/s/AKfycbzRjMN4VoReE8Jq9D5agq4RVdAHBYCBe2IZStB4O2oPtfIeQFZA2OW0POcdQhBFqPklVw/exec"; // 위에서 배포한 Apps Script URL로 변경
 
