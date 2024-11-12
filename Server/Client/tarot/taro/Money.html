@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>타로 카드 게임</title>
   <link rel="stylesheet" href="money.css">
 </head>
+
 <body>
   <div class="container">
     <h1>재물운</h1>
-    <h2>당신의 재정 상황은 어떻게 변화할까요?</h2> 
+    <h2>당신의 재정 상황은 어떻게 변화할까요? <br> 3장의 카드를 뽑아보세요</h2>
     <div id="tarot-deck"></div>
 
-    <div id="tarot-result" style="display: none;">
-      <h2>선택한 카드 결과</h2>
-      <div id="selected-cards"></div> <!-- 선택한 카드 결과 표시할 곳 -->
-      <a href="mainP.html"><button id="reset-btn">처음으로</button></a>
+    <div id="card-container">
+      <div class="card-row" id="card-row-1"></div>
+      <div class="card-row" id="card-row-2"></div>
+
+      <div id="tarot-result" style="display: none;">
+        <h2>선택한 카드 결과</h2>
+        <div id="selected-cards"></div> <!-- 선택한 카드 결과 표시할 곳 -->
+        <a href="mainP.html"><button id="reset-btn">처음으로</button></a>
+      </div>
+
+      <button id="start-btn">카드 뽑기 시작</button>
     </div>
 
-    <button id="start-btn">카드 뽑기 시작</button>
-  </div>
-
-  <script src="money.js"></script>
+    <script src="money.js"></script>
 </body>
+
 </html>

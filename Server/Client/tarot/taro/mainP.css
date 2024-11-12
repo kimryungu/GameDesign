@@ -1,194 +1,278 @@
 body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #170B3B; 
-            font-family: 'Arial', sans-serif;
-        }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 950px; /* 100vh 대체 */
+    margin: 0;
+    background-color: #170B3B; 
+    font-family: 'Arial', sans-serif;
+}
 
-        /* 화면 레이아웃 */
-        .container {
-            display: flex;
-            justify-content: space-between;
-            width: 80%;
-            height: 80vh;
-        }
+/* 화면 레이아웃 */
+.container {
+    display: flex;
+    width: 1600px;
+    height: 800px;
+}
 
-        .left, .right {
-            width: 45%;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: rgba(0, 0, 0, 0.5);
-            border-radius: 20px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-        }
+.right{
+    margin-left: 130px;
+}
 
-        .left h2, .right h2 {
-            color: #FAD081; /* 텍스트 색상 */
-            font-size: 3em; /* 글씨 크기 */
-            margin-bottom: 30px; /* 하단 여백 */
-            -webkit-text-stroke: 1px #0000008e; /* 테두리 색상과 두께 */
-            animation: glow 1s infinite alternate; /* 애니메이션 적용 */
-        }
-        
-        
-        /* 애니메이션 정의 */
-        @keyframes glow {
-            0% {
-                text-shadow: 0 0 10px #fad08177, 0 0 20px #fad08177, 0 0 30px #fad08177;
-            }
-            100% {
-                text-shadow: 0 0 20px #fad08177, 0 0 30px #fad08177, 0 0 40px #fad08177;
-            }
-        }
-        
+.left, .right {
+    width: 700px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
 
+.left h2, .right h2 {
+    color: #FAD081;
+    font-size: 48px; /* 3em 대체 */
+    margin-bottom: 30px;
+    -webkit-text-stroke: 1px #0000008e;
+    animation: glow 1s infinite alternate;
+}
 
-        /* 설명 텍스트 */
-        .description {
-            color: #A7D3E0;
-            font-size: 1.2em;
-            text-align: center;
-            margin-bottom: 20px;
-            height: 60px; 
-            display: flex;
-            align-items: center; 
-            justify-content: center; 
-            visibility: hidden; /* 처음에 숨김, 높이는 유지 */
-        }
+/* 애니메이션 정의 */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 10px #fad08177, 0 0 20px #fad08177, 0 0 30px #fad08177;
+    }
+    100% {
+        text-shadow: 0 0 20px #fad08177, 0 0 30px #fad08177, 0 0 40px #fad08177;
+    }
+}
 
-        a {
-            text-decoration: none; /* 링크의 밑줄 제거 */
-            color: inherit; /* 부모 요소의 색상 상속 */
-        }
+/* 설명 텍스트 */
+.description {
+    color: #A7D3E0;
+    font-size: 19px; /* 1.2em 대체 */
+    text-align: center;
+    margin-bottom: 20px;
+    height: 60px;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    visibility: hidden;
+}
 
-        .button {
-            background-color: #FAD081;
-            color: #170B3B;
-            border: 3px solid #170B3B;
-            border-radius: 10px;
-            padding: 15px 30px; /* 버튼 크기 */
-            text-align: center;
-            font-size: 1.2em; 
-            font-weight: bold; /* 글씨를 두껍게 설정 */
-            cursor: pointer;
-            transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4), 0 0 15px rgba(250, 208, 129, 0.5);
-            max-width: 170px; /* 버튼 최대 너비 조정 */
-            width: 100%; /* 버튼 너비 통일 */
-        }
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
-        .button:hover {
-            background: linear-gradient(135deg, #f1695f, #FFD700); /* 호버 효과 */
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5), 0 0 20px rgba(250, 208, 129, 0.8);
-        }
+.button {
+    background-color: #FAD081;
+    color: #170B3B;
+    border: 3px solid #170B3B;
+    border-radius: 10px;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 19px; /* 1.2em 대체 */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4), 0 0 15px rgba(250, 208, 129, 0.5);
+    max-width: 170px;
+    width: 100%; 
+}
 
-        /* 버튼을 2x2 그리드로 정렬 */
-        .button-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center; 
-            gap: 10px; /* 버튼 사이 간격 */
-            width: 100%;
-        }
+.button:hover {
+    background: linear-gradient(135deg, #f1695f, #FFD700);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5), 0 0 20px rgba(250, 208, 129, 0.8);
+}
 
-        .button-container a {
-            flex-basis: calc(45% - 10px); 
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 10px;
-        }
+.button1 {
+    background-color: #FAD081;
+    color: #170B3B;
+    border: 3px solid #170B3B;
+    border-radius: 10px;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 19px; /* 1.2em 대체 */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4), 0 0 15px rgba(250, 208, 129, 0.5);
+    max-width: 170px;
+    width: 100%; 
+}
 
-        /* 배경에 별 만들기 */
-        .star {
-            position: absolute;
-            border-radius: 50%;
-            background: rgba(250, 208, 129, 0.7);
-            opacity: 0;
-            animation: twinkle 2s infinite;
-        }
+.button1:hover {
+    background: linear-gradient(135deg, #f1695f, #FFD700);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5), 0 0 20px rgba(250, 208, 129, 0.8);
+}
 
-        @keyframes twinkle {
-            0%, 100% {
-                opacity: 0;
-            }
-            50% {
-                opacity: 1;
-            }
-        }
+.button2 {
+    background-color: #FAD081;
+    color: #170B3B;
+    border: 3px solid #170B3B;
+    border-radius: 10px;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 19px; /* 1.2em 대체 */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4), 0 0 15px rgba(250, 208, 129, 0.5);
+    max-width: 170px;
+    width: 100%; 
+}
 
-        /* 하단 텍스트 스타일 */
-        .bottom-text {
-            color: #FFFACD;
-            font-size: 1.2em;
-            font-weight: bold;
-            margin-top: 20px; /* 위쪽 여백 */
-        }
+.button2:hover {
+    background: linear-gradient(135deg, #f1695f, #FFD700);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5), 0 0 20px rgba(250, 208, 129, 0.8);
+}
 
-        .bottom-left {
-            margin-top: 40px; 
-        }
+.button3 {
+    background-color: #FAD081;
+    color: #170B3B;
+    border: 3px solid #170B3B;
+    border-radius: 10px;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 19px; /* 1.2em 대체 */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4), 0 0 15px rgba(250, 208, 129, 0.5);
+    max-width: 170px;
+    width: 100%; 
+}
 
-        .bottom-right {
-            margin-top: 40px; 
-        }
+.button3:hover {
+    background: linear-gradient(135deg, #f1695f, #FFD700);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5), 0 0 20px rgba(250, 208, 129, 0.8);
+}
 
-        /* 코인 표시 스타일 */
-        #coinDisplay {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            color: #FFA500;
-            font-size: 1.5em;
-            padding: 10px;
-            border: 2px solid #FFD700;
-            border-radius: 10px;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 10; /* 다른 요소 위에 위치 */
-        }
+.button4 {
+    background-color: #FAD081;
+    color: #170B3B;
+    border: 3px solid #170B3B;
+    border-radius: 10px;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 19px; /* 1.2em 대체 */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4), 0 0 15px rgba(250, 208, 129, 0.5);
+    max-width: 170px;
+    width: 100%; 
+}
 
-        /* 환영 메시지 스타일 */
-        #welcome-message {
-            position: fixed;
-            top: 0px;
-            right: 140px;
-            color: #ffef96;
-            font-size: 1.2em;
-            padding: 8px;
-            background-color: rgba(0, 0, 0, 0.6);
-            border-radius: 8px;
-            z-index: 10; /* 다른 요소 위에 위치 */
-        }
+.button4:hover {
+    background: linear-gradient(135deg, #f1695f, #FFD700);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5), 0 0 20px rgba(250, 208, 129, 0.8);
+}
 
-        /* 로그아웃 버튼 스타일 */
-        .logout-button {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            font-size: 1.5em;
-            padding: 10px;
-            border: 2px solid #FFD700;
-            border-radius: 10px;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
+/* 버튼을 2x2 그리드로 정렬 */
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
 
-        #logout-button {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background-color: #170B3B; /* 반투명한 흰색 */
-            color: #ffffff; /* 글씨 색상: 검은색 */
-            border: 2px solid #FFD700; /* 테두리 색상: 노란색 */
-            border-radius: 8px; /* 둥근 모서리 */
-            padding: 10px 15px;
-            font-weight: bold;
-            cursor: pointer;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
+.button-container a {
+    flex-basis: calc(320px - 10px); /* 45% 대체 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+/* 배경에 별 만들기 */
+.star {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(250, 208, 129, 0.7);
+    opacity: 0;
+    animation: twinkle 2s infinite;
+}
+
+@keyframes twinkle {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* 하단 텍스트 스타일 */
+.bottom-text {
+    color: #FFFACD;
+    font-size: 19px; /* 1.2em 대체 */
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.bottom-left {
+    margin-top: 40px;
+}
+
+.bottom-right {
+    margin-top: 40px;
+}
+
+/* 코인 표시 스타일 */
+#coinDisplay {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    color: #FFA500;
+    font-size: 24px; /* 1.5em 대체 */
+    padding: 10px;
+    border: 2px solid #FFD700;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+/* 환영 메시지 스타일 */
+#welcome-message {
+    position: fixed;
+    top: 0px;
+    right: 140px;
+    color: #ffef96;
+    font-size: 19px; /* 1.2em 대체 */
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    z-index: 10;
+}
+
+/* 로그아웃 버튼 스타일 */
+.logout-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 24px; /* 1.5em 대체 */
+    padding: 10px;
+    border: 2px solid #FFD700;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+#logout-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #170B3B;
+    color: #ffffff;
+    border: 2px solid #FFD700;
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}

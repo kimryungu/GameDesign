@@ -110,7 +110,8 @@
             "20221574": "한석범",
             "20221923": "이중현",
             "20231868": "김지혜",
-            "20241862": "이기정"
+            "20241862": "이기정",
+            "11111": "이은석"
         };
 
         function login() {
@@ -136,10 +137,11 @@
             const id = members[username] === password ? [username] : [0]; // 로그인 성공 시 학번, 실패 시 0
             const eventType = "로그인 버튼 클릭"; // 이벤트 종류
             const comment = members[username] === password ? "로그인에 성공하였습니다." : "로그인에 실패하였습니다."; // 로그인 성공/실패에 따라 코멘트 변경
+            const coin = "0";
 
             const url = "https://script.google.com/macros/s/AKfycbzRjMN4VoReE8Jq9D5agq4RVdAHBYCBe2IZStB4O2oPtfIeQFZA2OW0POcdQhBFqPklVw/exec"; // 위에서 배포한 Apps Script URL로 변경
 
-            fetch(`${url}?eventId=${eventId}&eventDate=${eventDate}&eventTime=${eventTime}&id=${id}&eventType=${eventType}&comment=${comment}`)
+            fetch(`${url}?eventId=${eventId}&eventDate=${eventDate}&eventTime=${eventTime}&id=${id}&eventType=${eventType}&comment=${comment}&coin=${coin}`)
                 .then(response => response.text())
                 .then(data => {
                     console.log(data); // 성공적으로 로그가 남겨지면 콘솔에 출력
