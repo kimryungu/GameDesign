@@ -46,7 +46,7 @@ const hideDescription = () => {
 };
 
 // 코인 표시 및 업데이트 함수
-let coins = parseInt(localStorage.getItem('coins')) || 10; // 로컬 스토리지에서 코인 수 가져오기
+let coins = parseInt(localStorage.getItem('coins')) || 0; // 로컬 스토리지에서 코인 수 가져오기
 const updateCoinDisplay = () => {
     document.getElementById('coinDisplay').innerText = `🪙 ${coins}`;
 };
