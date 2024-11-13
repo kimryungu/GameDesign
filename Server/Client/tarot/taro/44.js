@@ -294,7 +294,7 @@ function showReturnButton() {
     returnButton.classList.add('return-button');
 
     returnButton.addEventListener('click', () => {
-        coins += 1; // 코인 적립
+        coins += 4; // 코인 적립
         localStorage.setItem('coins', coins); // 로컬 스토리지에 코인 저장
         alert('게임이 끝났습니다! 코인이 적립됩니다.');
         window.location.href = 'mainP.html'; // mainP.html로 이동
@@ -305,3 +305,22 @@ function showReturnButton() {
 
 // 여기서 setupGame()을 호출하여 게임을 자동으로 시작합니다.
 setupGame();
+
+window.addEventListener('load', function() {
+    const music = document.getElementById('bg-music');
+    
+    // 브라우저 자동 재생 문제 해결을 위해 페이지 클릭 시 재생
+    function playMusic() {
+        if (music && music.paused) {
+            music.play().catch((error) => {
+                console.warn("자동 재생이 차단되었습니다. 페이지 클릭 시 재생됩니다.");
+            });
+        }
+    }
+
+    // 페이지 로드 시 재생 시도
+    playMusic();
+
+    // 사용자가 페이지를 클릭하면 음악 재생 시도
+    document.addEventListener('click', playMusic);
+});

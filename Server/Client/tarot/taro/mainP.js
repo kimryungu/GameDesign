@@ -383,3 +383,22 @@ function logEvent() {
             console.error("Error:", error);
         });
 }
+
+window.addEventListener('load', function() {
+    const music = document.getElementById('bg-music');
+    
+    // 브라우저 자동 재생 문제 해결을 위해 페이지 클릭 시 재생
+    function playMusic() {
+        if (music && music.paused) {
+            music.play().catch((error) => {
+                console.warn("자동 재생이 차단되었습니다. 페이지 클릭 시 재생됩니다.");
+            });
+        }
+    }
+
+    // 페이지 로드 시 재생 시도
+    playMusic();
+
+    // 사용자가 페이지를 클릭하면 음악 재생 시도
+    document.addEventListener('click', playMusic);
+});
