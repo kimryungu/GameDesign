@@ -331,7 +331,7 @@ logoutButton.onclick = function () {
                 console.error("Error:", error);
             })
             .finally(() => {
-                window.location.href = "login.html"; 
+                window.location.href = "index.html"; 
             });
     } else {
         // 로그인 버튼 클릭 시의 로그 기록
@@ -355,7 +355,7 @@ logoutButton.onclick = function () {
                 console.error("Error:", error);
             })
             .finally(() => {
-                window.location.href = "login.html"; 
+                window.location.href = "index.html"; 
             });
     }
 };
