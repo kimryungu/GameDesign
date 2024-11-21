@@ -1,0 +1,148 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 950px; /* 100vh 대체 */
+    margin: 0;
+    background-color: #170B3B; 
+    font-family: 'Arial', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.shop {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    color: #FFA500;
+    font-size: 24px; /* 1.5em 대체 */
+    padding: 10px;
+    border: 2px solid #FFD700;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    z-index: 10;
+}
+
+.main{
+    display: flex;
+    align-items: center;
+}
+
+p {
+    color: #FFFACD;
+    font-size: 20px; /* 1.2em 대체 */
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.buy-notice {
+    color: #FFFACD;
+    font-size: 22px; /* 1.2em 대체 */
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    width: 800px;
+}
+
+.no1 {
+    flex-basis: calc(320px - 10px); /* 45% 대체 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.button1 {
+    background-color: #FAD081;
+    color: #170B3B;
+    border: 3px solid #170B3B;
+    border-radius: 10px;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 19px; /* 1.2em 대체 */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4), 0 0 15px rgba(250, 208, 129, 0.5);
+    max-width: 170px;
+    width: 100%; 
+}
+
+.button1:hover {
+    background: linear-gradient(135deg, #f1695f, #FFD700);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5), 0 0 20px rgba(250, 208, 129, 0.8);
+}
+
+.button2 {
+    background-color: #FAD081;
+    color: #170B3B;
+    border: 3px solid #170B3B;
+    border-radius: 10px;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 19px; /* 1.2em 대체 */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4), 0 0 15px rgba(250, 208, 129, 0.5);
+    max-width: 170px;
+    width: 100%; 
+}
+
+.button2:hover {
+    background: linear-gradient(135deg, #f1695f, #FFD700);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5), 0 0 20px rgba(250, 208, 129, 0.8);
+}
+
+.button3 {
+    background-color: #FAD081;
+    color: #170B3B;
+    border: 3px solid #170B3B;
+    border-radius: 10px;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 19px; /* 1.2em 대체 */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4), 0 0 15px rgba(250, 208, 129, 0.5);
+    max-width: 170px;
+    width: 100%; 
+}
+
+.button3:hover {
+    background: linear-gradient(135deg, #f1695f, #FFD700);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5), 0 0 20px rgba(250, 208, 129, 0.8);
+}
+
+.button4 {
+    background-color: #FAD081;
+    color: #170B3B;
+    border: 3px solid #170B3B;
+    border-radius: 10px;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 19px; /* 1.2em 대체 */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4), 0 0 15px rgba(250, 208, 129, 0.5);
+    max-width: 170px;
+    width: 100%; 
+}
+
+.button4:hover {
+    background: linear-gradient(135deg, #f1695f, #FFD700);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5), 0 0 20px rgba(250, 208, 129, 0.8);
+}

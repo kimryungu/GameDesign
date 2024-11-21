@@ -80,7 +80,7 @@ const spendCoin1 = () => {
         const eventTime = new Date().toLocaleTimeString();
         const id = userId || "0"; 
         const eventType = "타로 버튼 클릭";
-        const comment = "연애운 시작 실패";
+        const comment = "연애운 시작 실패"; 
         const coin = coins;
         const url = "https://script.google.com/macros/s/AKfycbzRjMN4VoReE8Jq9D5agq4RVdAHBYCBe2IZStB4O2oPtfIeQFZA2OW0POcdQhBFqPklVw/exec";
 

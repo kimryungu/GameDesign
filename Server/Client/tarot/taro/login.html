@@ -72,7 +72,7 @@
     </div>
 
     <audio id="bg-music" src="./audio/background.mp3" loop preload="auto"></audio>
-    
+
     <script>
         // 회원 데이터베이스
         const members = {
@@ -113,16 +113,41 @@
             "20221923": "이중현",
             "20231868": "김지혜",
             "20241862": "이기정",
-            "123123": "이은석"
+            "123123": "이은석",
+            "1": "곽지훈",
+            "2": "민지홍",
+            "3": "이노건",
+            "4": "정태구",
+            "5": "김명주",
+            "6": "이수민",
+            "7": "전소현",
+            "8": "임도영",
+            "9": "김보정",
+            "10": "황예하",
+            "11": "박연택",
+            "12": "이도원",
+            "13": "김승기",
+            "14": "김태균",
+            "15": "승준휘",
+            "16": "최준헌",
+            "17": "김민재",
+            "18": "김형우",
+            "19": "이상훈",
+            "20": "김현철",
+            "21": "최병철",
+            "22": "한상호"
         };
 
         function login() {
             const username = document.getElementById("username").value;
             const password = document.getElementById("password").value;
             const message = document.getElementById("message");
-
+            // 로컬 스토리지에서 코인 수 가져오기, 없으면 기본값 0으로 설정
+            let coins = parseInt(localStorage.getItem('coins')) || 0;
             // 입력된 학번과 이름 확인
             if (members[username] === password) {
+                coins += 1;
+                localStorage.setItem('coins', coins);
                 message.style.color = "#8f8";
                 message.textContent = "로그인 성공!";
                 localStorage.setItem('userId', username); // 학번을 로컬 스토리지에 저장

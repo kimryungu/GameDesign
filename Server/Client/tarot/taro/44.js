@@ -294,7 +294,7 @@ function showReturnButton() {
     returnButton.classList.add('return-button');
 
     returnButton.addEventListener('click', () => {
-        coins += 4; // 코인 적립
+        coins += 2; // 코인 적립
         localStorage.setItem('coins', coins); // 로컬 스토리지에 코인 저장
         alert('게임이 끝났습니다! 코인이 적립됩니다.');
         window.location.href = 'mainP.html'; // mainP.html로 이동

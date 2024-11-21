@@ -237,6 +237,20 @@ a {
     z-index: 10;
 }
 
+.shop {
+    position: fixed;
+    top: 20px;
+    left: 130px;
+    color: #FFA500;
+    font-size: 24px; /* 1.5em 대체 */
+    padding: 10px;
+    border: 2px solid #FFD700;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    z-index: 10;
+}
+
 /* 환영 메시지 스타일 */
 #welcome-message {
     position: fixed;
